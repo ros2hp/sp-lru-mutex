@@ -1,0 +1,23 @@
+[package]
+name = "sp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { version = "1.5.8", features = ["behavior-version-latest"] }
+#aws-sdk-dynamodb = "1.10.0"
+aws-sdk-dynamodb = { version = "1.50.0", features = ["behavior-version-latest"] }
+aws-types = "1.1.4"
+# tokio is a aws dependency
+tokio = { version = "1.40.0", features = ["full"] }
+mysql_async = "0.34.*"
+aws-smithy-runtime-api = "1.7"
+
+[dependencies.uuid]
+version = "1.11.0"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
+

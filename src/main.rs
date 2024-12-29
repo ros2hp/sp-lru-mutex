@@ -74,7 +74,7 @@ const MAX_OV_BLOCKS: usize = 5; // prod value : 100
 // OV_MAX_BATCH_SIZE - number of items to an overflow batch. Always fixed at this value.
 // The limit is checked using the database SIZE function during insert of the child data into the overflow block.
 // An overflow block has an unlimited number of batches.
-const OV_MAX_BATCH_SIZE: usize = 217; //15; // Prod 100 to 500.
+const OV_MAX_BATCH_SIZE: usize = 160; //15; // Prod 100 to 500.
 
 // OV_BATCH_THRESHOLD, initial number of batches in an overflow block before creating new Overflow block.
 // Once all overflow blocks have been created (MAX_OV_BLOCKS), blocks are randomly chosen and each block
